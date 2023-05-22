@@ -1,0 +1,87 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tplay' YouTube",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tplay",
+                    "--package=tplay"
+                ],
+                "filter": {
+                    "name": "tplay",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tplay' local",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tplay",
+                    "--package=tplay"
+                ],
+                "filter": {
+                    "name": "tplay",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "assets/yt.webm",
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tplay' camera",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tplay",
+                    "--package=tplay"
+                ],
+                "filter": {
+                    "name": "tplay",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "/dev/video0",
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'tplay'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=tplay",
+                    "--package=tplay"
+                ],
+                "filter": {
+                    "name": "tplay",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
